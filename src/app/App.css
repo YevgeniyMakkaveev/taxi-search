@@ -1,17 +1,56 @@
 .App {
   text-align: center;
+   height: 100vh;
+   width: 100vw;
+}
+.head{
+  position: relative;
+  width: auto;
+  min-height: 128px;
+  height: 10vh;
+  left: 0px;
+  top: 0px;
+  margin-bottom: 2%;
+  background: #F2F3F4;
+  text-align: center;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.labels{
+   text-align: center;
+   position: relative;
+   top: 50%;
+  color: #707070;
+ font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; 
 }
 
 .sidebar {
-  position: fixed;
-  width: 200px;
-  height: 100%;
-  min-height: 100vh !important;
+ position: fixed;
+width: 15%;
+min-width: 150px;
+max-width: 250px;
+left: 0%;
+right: 84.44%;
+top: 0;
+ bottom: 0;
+background: #E4E5E6;
+mix-blend-mode: normal;
+box-shadow: inset 0px -1px 0px rgba(150, 150, 150, 0.25);
+ z-index: 0;
+}
+
+.footer{
+  position: relative;
   left: 0%;
-  right: 84.44%;
-  
-  background: #E4E5E6;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  height: 4%;
+  min-height: 100px !important;
+  width: 100%;
+z-index: 2;
+  background: #D4D5D6;
   mix-blend-mode: normal;
-  box-shadow: inset 0px -1px 0px rgba(150, 150, 150, 0.25);
-  
 }

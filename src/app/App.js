@@ -1,13 +1,22 @@
 import './App.css';
 import CustomTable from '../table/';
-import Head from '../header';
+
 
 function App() {
   return (
     <div className="App">
-      
-      <div className="sidebar"></div>
+       <div className="head">
+         <h2 className="labels">Header</h2>
+         
+ </div>
+      <div className="sidebar">
+      </div>
       <CustomTable/>
+      <div className="footer">
+       
+         <h2 className="labels">Footer</h2>
+       
+      </div>
     </div>
   );
 }
