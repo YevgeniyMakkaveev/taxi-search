@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import TableMaker from './maker';
 import CustomSpinner from '../spinner';
+
 import './table.css'
 
 
 const CustomTable = () => {
+   const [error, setError] = useState(null)
    const [isLoaded, setIsLoaded] = useState(false);
    const [items, setItems] = useState([]);
 
@@ -17,7 +19,10 @@ const CustomTable = () => {
                console.log(result)
                setIsLoaded(true);
                setItems(result.cars);
-            },
+            }, (error) =>{
+               setIsLoaded(true);
+               setError(error)
+            }
          )
    }, [])
    let innerId = 0
@@ -38,7 +43,11 @@ const CustomTable = () => {
 
    if (!isLoaded) {
       return <div className="loadWrap"><CustomSpinner/> </div>;
-   } else {
+   } 
+   else if (error){
+      return <div className="errorMsg">Ошибка при получении данных с сервера: {error.message}</div>
+   }
+   else {
       const items2 = items.map(getIt)
       return (
          <div className="left">

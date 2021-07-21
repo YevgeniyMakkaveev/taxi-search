@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import BootstrapTable from 'react-bootstrap-table-next';
-import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
+import ToolkitProvider from 'react-bootstrap-table2-toolkit';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './maker.css'
@@ -11,7 +11,6 @@ const TableMaker = (props) => {
     onClick: (e, column, columnIndex, row, rowIndex) => {
       let test = getTarif(row, columnIndex)
       if (test > 1) { setSelect(`${row.markModel} ${test} `) }
-      
     }
   }
 
@@ -28,7 +27,6 @@ const TableMaker = (props) => {
     }
   }
 
-
   const columns = [{
     dataField: 'markModel',
     text: 'Марка и модель',
@@ -37,37 +35,58 @@ const TableMaker = (props) => {
     dataField: 'comfy',
     text: 'Комфорт',
     sort: true,
-    events: tableEvents
+    events: tableEvents,
+    style: {
+      cursor: `pointer`
+    }
   }, {
     dataField: 'comfyPlus',
     text: 'Комфорт+',
     sort: true,
-    events: tableEvents
+    events: tableEvents,
+    style: {
+      cursor: `pointer`
+    }
   }, {
     dataField: 'biz',
     text: 'Бизнес',
     sort: true,
-    events: tableEvents
+    events: tableEvents,
+    style: {
+      cursor: `pointer`
+    }
   }, {
     dataField: 'eco',
     text: 'Эконом',
     sort: true,
-    events: tableEvents
+    events: tableEvents,
+    style: {
+      cursor: `pointer`
+    }
   }, {
     dataField: 'mini',
     text: 'Минивен',
     sort: true,
-    events: tableEvents
+    events: tableEvents,
+    style: {
+      cursor: `pointer`
+    }
   }, {
     dataField: 'stand',
     text: 'Стандарт',
     sort: true,
-    events: tableEvents
+    events: tableEvents,
+    style: {
+      cursor: `pointer`
+    }
   }, {
     dataField: 'light',
     text: 'Лайт',
     sort: true,
-    events: tableEvents
+    events: tableEvents,
+    style: {
+      cursor: `pointer`
+    }
   }];
 
 
@@ -105,17 +124,16 @@ const TableMaker = (props) => {
   const options = {
     sizePerPage: 10,
     alwaysShowAllBtns: true,
-    // hideSizePerPage: true,
     sizePerPageList: [{
-          text: '5',
-          value: 5
-        }, {
-          text: '10',
-          value: 10
-        }, {
-          text: '15',
-          value: 15
-        }],
+      text: '5',
+      value: 5
+    }, {
+      text: '10',
+      value: 10
+    }, {
+      text: '15',
+      value: 15
+    }],
     pageButtonRenderer
   };
 
@@ -134,7 +152,7 @@ const TableMaker = (props) => {
   }
 
   const items = props.data
-  const selectdCar = selectModel
+  const selectdCar = selectModel ? `Выбран автомобиль: ${selectModel}` : 'Выберите автомобиль'
   return (
     <div>
       <ToolkitProvider
@@ -160,7 +178,7 @@ const TableMaker = (props) => {
         }
       </ToolkitProvider>
       <div className="select-car">
-        <p>Выбран автомобиль {selectdCar}</p>
+        <p> {selectdCar}</p>
       </div>
     </div>
   )

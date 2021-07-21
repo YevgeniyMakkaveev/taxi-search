@@ -1,18 +1,21 @@
 .select-car {
-width: auto;
-
-margin: 2% 5% 2%;
-
-background: rgba(240, 242, 244, 0.5);
-border: 1px solid #DEE5EB;
-box-sizing: border-box;
-
-/* Table/1-Right */
-box-shadow: inset -1px 0px 0px rgba(198, 209, 221, 0.5);
+ padding-top: 1em;
+ width: auto;
+ display: flex;
+ justify-content: center;
+ align-content: center;
+ margin: 2% 0;
+ background: rgba(240, 242, 244, 0.5);
+ border: 1px solid #DEE5EB;
+ /* Table/1-Right */
+ box-shadow: inset -1px 0px 0px rgba(198, 209, 221, 0.5);
 }
 
-.fatty{
+#button-addon2 {
+ padding: 0 2em;
+}
+
+.fatty {
  padding: 10px;
  margin: 0 2.5px 0;
- 
 }
