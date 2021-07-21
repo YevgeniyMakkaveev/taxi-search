@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  min-height: 100vh !important;
+  left: 0%;
+  right: 84.44%;
+  
+  background: #E4E5E6;
+  mix-blend-mode: normal;
+  box-shadow: inset 0px -1px 0px rgba(150, 150, 150, 0.25);
+  
+}
