@@ -5,9 +5,8 @@ import App from './app/App';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  
+    <App />,
   document.getElementById('root')
 );
 

@@ -1,0 +1,25 @@
+.error-msg {
+ text-align: center;
+ width: 100%;
+ position: absolute;
+ vertical-align: middle;
+ height: max-content;
+ min-height: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+
+ background: url(./error.jpg) no-repeat;
+ background-size: cover;
+
+}
+
+.error-indicator img {
+ margin-bottom: 1rem;
+}
+
+.text {
+ font-size: 5rem;
+ color: brown
+;
+}

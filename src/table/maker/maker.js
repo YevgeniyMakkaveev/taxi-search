@@ -11,7 +11,7 @@ const TableMaker = (props) => {
     onClick: (e, column, columnIndex, row, rowIndex) => {
       let test = getTarif(row, columnIndex)
       if (test > 1) { setSelect(`${row.markModel} ${test} `) }
-      console.log(`${test} ${row.markModel}`)
+      
     }
   }
 
@@ -82,7 +82,7 @@ const TableMaker = (props) => {
       e.preventDefault();
       onPageChange(page);
     };
-   
+
     const activeStyle = {};
     if (active) {
       activeStyle.backgroundColor = 'gray';
@@ -97,7 +97,7 @@ const TableMaker = (props) => {
     }
     return (
       <li className="page-item">
-        <a href="#"  className="fatty" onClick={handleClick} style={activeStyle}>{page}</a>
+        <a href="#" className="fatty" onClick={handleClick} style={activeStyle}>{page}</a>
       </li>
     );
   };
@@ -105,16 +105,17 @@ const TableMaker = (props) => {
   const options = {
     sizePerPage: 10,
     alwaysShowAllBtns: true,
+    // hideSizePerPage: true,
     sizePerPageList: [{
-      text: '5',
-      value: 5
-    }, {
-      text: '10',
-      value: 10
-    }, {
-      text: '15',
-      value: 15
-    }],
+          text: '5',
+          value: 5
+        }, {
+          text: '10',
+          value: 10
+        }, {
+          text: '15',
+          value: 15
+        }],
     pageButtonRenderer
   };
 
@@ -137,7 +138,7 @@ const TableMaker = (props) => {
   return (
     <div>
       <ToolkitProvider
-        keyField = "markModel"
+        keyField="markModel"
         bootstrap4
         data={items}
         columns={columns}
