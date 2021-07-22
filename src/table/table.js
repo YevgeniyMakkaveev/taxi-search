@@ -16,7 +16,6 @@ const CustomTable = () => {
          .then(res => res.json())
          .then(
             (result) => {
-               console.log(result)
                setIsLoaded(true);
                setItems(result.cars);
             }, (error) =>{
