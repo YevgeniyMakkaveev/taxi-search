@@ -34,7 +34,6 @@ const TableMaker = (props) => {
   }, {
     dataField: 'comfy',
     text: 'Комфорт',
-    sort: true,
     events: tableEvents,
     style: {
       cursor: `pointer`
@@ -42,7 +41,6 @@ const TableMaker = (props) => {
   }, {
     dataField: 'comfyPlus',
     text: 'Комфорт+',
-    sort: true,
     events: tableEvents,
     style: {
       cursor: `pointer`
@@ -50,7 +48,6 @@ const TableMaker = (props) => {
   }, {
     dataField: 'biz',
     text: 'Бизнес',
-    sort: true,
     events: tableEvents,
     style: {
       cursor: `pointer`
@@ -58,7 +55,6 @@ const TableMaker = (props) => {
   }, {
     dataField: 'eco',
     text: 'Эконом',
-    sort: true,
     events: tableEvents,
     style: {
       cursor: `pointer`
@@ -66,7 +62,6 @@ const TableMaker = (props) => {
   }, {
     dataField: 'mini',
     text: 'Минивен',
-    sort: true,
     events: tableEvents,
     style: {
       cursor: `pointer`
@@ -74,7 +69,6 @@ const TableMaker = (props) => {
   }, {
     dataField: 'stand',
     text: 'Стандарт',
-    sort: true,
     events: tableEvents,
     style: {
       cursor: `pointer`
@@ -82,13 +76,11 @@ const TableMaker = (props) => {
   }, {
     dataField: 'light',
     text: 'Лайт',
-    sort: true,
     events: tableEvents,
     style: {
       cursor: `pointer`
     }
   }];
-
 
   const pageButtonRenderer = ({
     page,
@@ -152,7 +144,7 @@ const TableMaker = (props) => {
   }
 
   const items = props.data
-  const selectdCar = selectModel ? `Выбран автомобиль: ${selectModel}` : 'Выберите автомобиль'
+  const selectdCar = selectModel ? `Выбран автомобиль: ${selectModel} года выпуска` : 'Выберите автомобиль'
   return (
     <div>
       <ToolkitProvider

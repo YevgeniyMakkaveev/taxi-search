@@ -6,21 +6,23 @@ function App() {
   
   return (
     
+
+    <ErrorBoundry>
       <div className="App">
-        <ErrorBoundry>
-          <div className="content">
-        <div className="head">
-          <h2 className="labels">Header</h2>
-        </div>
-        <div className="sidebar">
-        </div>
-        <CustomTable />
+        <div className="content">
+          <div className="head">
+            <h2 className="labels">Header</h2>
+          </div>
+          <div className="sidebar">
+          </div>
+          <CustomTable />
         </div>
         <div className="footer">
           <h2 className="labels">Footer</h2>
         </div>
-        </ErrorBoundry>
       </div>
+    </ErrorBoundry>
+      
     
   );
 }
