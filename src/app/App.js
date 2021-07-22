@@ -11,14 +11,14 @@ function App() {
       <div className="App">
         <div className="content">
           <div className="head">
-            <h2 className="labels">Header</h2>
+            <div className="labels"> <h2 className="font"> Header</h2></div>
           </div>
           <div className="sidebar">
           </div>
           <CustomTable />
         </div>
         <div className="footer">
-          <h2 className="labels">Footer</h2>
+          <div className="labels"><h2 className="font">Footer</h2></div>
         </div>
       </div>
     </ErrorBoundry>

@@ -12,21 +12,22 @@
   height: 1rem;
   margin-bottom: 2%;
   background: #F2F3F4;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
   z-index: 2;
 }
 
 .labels{
-   position: relative;
-   top: 50%;
-  color: #707070;
-  font-size: calc(0.65em + 0.65vw);
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 700;
-
+  display: flex;
+  justify-content: space-around;
+  vertical-align: middle;
+  align-items: center;
+  height: 100%;
+  }
+.font{
+color: #707070;
+font-size: calc(0.65em + 0.65vw);
+font-style: normal;
+font-variant: normal;
+font-weight: 700;
 }
 .sidebar {
 position: fixed;
